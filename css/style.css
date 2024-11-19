@@ -1,0 +1,652 @@
+/* ==========BASIC UNIVERSAL STYLING & CLEAN UP============= */
+    /* some basic css resetting */
+body { margin: 0; box-sizing: border-box; font-family: 'Times New Roman', Times, serif;}
+a { text-decoration: none; color:black; font-family: 'Times New Roman', Times, serif;}
+h1 {font-family: 'Times New Roman', Times, serif;}
+h2 {font-family: 'Times New Roman', Times, serif;}
+
+
+.left-block {
+  width: 15%; 
+  background-color: #d3d3d3; 
+  height: 100vh; 
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.right-block {
+  width: 15%; 
+  background-color: #d3d3d3; 
+  height: 100vh; 
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.content {
+  width: 70%;     
+  margin: 0 15%; 
+  background-color: #ffffff; 
+}
+
+/* ==========HEADER============= */
+/* ==========LOGO============= */
+/* ==========NAVIGATION============= */
+.heroimg{
+  position: relative;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align items vertically */
+  padding: 15px 30px;
+  background-color: #7a756a; 
+  color: #fff;
+  z-index: 999; 
+
+}
+
+.hamburger-menu-container {
+  display: none;
+  cursor: pointer; 
+  z-index: 10000;
+}
+button {
+  position: relative;
+  border: none;
+  cursor: pointer;
+  appearance: none;
+  background-color: inherit;
+  transition: transform 0.7s ease-in-out;
+  z-index: 10000;
+}
+
+#side-menu {
+  width: 0;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #333;
+  overflow: hidden;
+  transition: width 0.3s ease;
+  padding-top: 60px;
+  z-index: 10000;
+}
+#side-menu.active {
+  width: 250px; 
+  
+}
+
+#side-menu .close-btn {
+  display: block;
+  text-align: left;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  z-index: 10000;
+}
+
+#side-menu ul {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+
+}
+
+#side-menu ul li {
+  padding: 10px 0;
+}
+
+#side-menu ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-left {
+  display: flex; 
+  align-items: center;
+  justify-content: flex-start; 
+  gap: 15px; 
+}
+
+.navbar h1{
+  margin: 0;
+}
+
+.nav-links {
+  display: flex; 
+  justify-content: flex-end;
+}
+
+.nav-links a {
+  margin-right: 40px; 
+  margin-left: 40px;
+  text-decoration: none; 
+  color: inherit; 
+  white-space: nowrap;
+}
+/* https://www.w3schools.com/howto/howto_js_sidenav.asp */
+
+
+
+
+
+.logo-container {
+  display: flex; 
+  width: 70px; 
+  height: 70px; 
+  overflow: hidden; 
+  justify-content: center;
+
+}
+
+.logo-container img {
+  max-width: 100%; 
+  max-height: 100%; 
+  object-fit: contain; 
+  margin: 5px;
+  border-radius: 100%; 
+  justify-content: flex-start;
+
+
+}
+
+
+
+
+
+
+
+/* ==========MAIN BODY CONTENT============= */
+
+
+
+.hero-container {
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-image {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;    
+    z-index: 1;
+}
+
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+}
+
+  
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+.overlay-text {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: #ffff; 
+    font-size: 20px; 
+    text-align: center;
+}
+
+.overlay-text-h1 {
+  position: absolute;
+  font-size: 3em;
+  left: 50%; 
+  bottom: 0;
+  color: #7a756a; 
+  text-align: center;
+  transform: translate(-50%, -50%); 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* ==========SECTION 1 STYLING============= */
+.hidden {
+  opacity: 0;
+  transform: translateY(50px); 
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.reveal {
+  opacity: 1;
+  transform: translateY(0); 
+}
+.about-us {
+  height: 60vh;
+  font-family: 'Arial', sans-serif;
+  background-color: #e6d8c6; 
+  padding: 10px;
+  text-align: center;
+  justify-content: center;
+} 
+.about-us h2 {
+  font-size: 2rem;
+  color: #333; 
+}
+
+.timeline-container{
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.timeline {
+  display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    margin: 0 auto;
+    max-width: 1200px;
+  
+}
+
+.timeline-bar {
+  display: flex;
+  width: 90%;
+  height: 20px;
+  background-color: #7b7460;
+  border-radius: 50px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.timeline p{
+  position: absolute;
+  font-weight: bold;
+  top: -7%;
+  left: 1%;
+}
+
+.timeline-vertical-line-1 {
+  border-left: 3px solid #7b7460;
+  height: 200px;
+  position: absolute;
+  left: 30%;
+}
+.timeline-vertical-line-1 img{
+  position: relative;
+  width: auto;
+  height: 80%;
+  top: 90%;
+  right: 50%;
+}
+
+.timeline-vertical-line-2 {
+  border-left: 3px solid #7b7460;
+  height: 200px;
+  position: absolute;
+  left: 10%;
+}
+.timeline-vertical-line-2 img{
+  position: relative;
+  width: auto;
+  height: 80%;
+  top: 90%;
+  right: 40%
+}
+
+
+.timeline-vertical-line-3 {
+  border-left: 3px solid #7b7460;
+  height: 200px;
+  position: absolute;
+  right: 10%;
+}
+.timeline-vertical-line-3 img{
+  position: relative;
+  width: auto;
+  height: 80%;
+  top: 90%;
+  right: 50%;
+}
+
+.timeline-vertical-line-4 {
+  border-left: 3px solid #7b7460;
+  height: 200px;
+  position: absolute;
+  right: 30%;
+}
+.timeline-vertical-line-4 img{
+  position: relative;
+  width: auto;
+  height: 80%;
+  top: 90%;
+  right: 50%;
+
+}
+
+.timeline-item {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  padding: 0 10px;
+  min-width: 150px; 
+}
+
+
+
+
+/* ==========SECTION 2 STYLING============= */
+.gallery{
+  font-family: 'Arial', sans-serif;
+  background-color: #D6C0A3; 
+  padding: 100px;
+  margin: 10px;
+  text-align: center;
+}
+
+.gallery h2{
+  padding-bottom: 50px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+.gallery-grid img {
+  width: 100%;
+  max-width: 150px; /* Placeholder size */
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* ==========SECTION 3 STYLING============= */
+
+/* Give the calendar 2/3 of the parent container */
+.booking {
+  background-image: url('../images/booking-contour.PNG');  
+
+  width: 100%;
+  height: 80vh; 
+  object-fit: cover; 
+}
+
+
+/* https://cloudinary.com/guides/front-end-development/6-ways-to-stretch-a-background-image-with-css#:~:text=To%20stretch%20the%20background%20image%20across%20the%20container's%20width%20and,container%20differs%20from%20the%20image.&text=To%20cover%20the%20entire%20viewport%2C%20use,%2Dsize%3A%20100vw%20100vh%3B%20. */
+.calendar-container {
+  width: 100%;
+  height: 70vh; 
+  padding-top: 15px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background-position: center;
+  background-repeat: no-repeat; 
+}
+
+.calendar-container h2{
+  color: #7b7460;
+  margin-top: 0px;
+  padding-top: 15px;
+  text-align:inherit;
+}
+
+.calendar {
+  width: 66.66%;
+  height: 45vh;
+  border-collapse: collapse;
+  margin: 30px auto;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.calendar th,
+.calendar td {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+.calendar th {
+  background-color: #7b7460;
+  color: #fff;
+  font-weight: bold;
+}
+
+.calendar td {
+  background-color: #e6d8c6;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.calendar td:hover {
+  background-color: #e6e6e6; 
+}
+
+
+
+.calendar td.selected {
+  background-color: #d3a87c;
+  color: #fff;
+}
+/* https://www.geeksforgeeks.org/how-to-create-a-dynamic-calendar-in-html-css-javascript/ */
+
+#selected-dates{
+  text-align: center;
+  margin: 10px;;
+}
+
+  
+
+
+
+
+/* ==========SECTION 4 STYLING============= */
+.contact-us{
+  margin: 10px;
+  height: 30vh;
+  width: auto;
+  background-color: #7a756a;
+
+}
+.contact-us h2{
+  margin: 0;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-us-container{
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+.contact-us-container img{
+  display: flex;
+  justify-content: space-between;
+  height: 5vh;
+  width: auto;
+}
+
+.contact-logo-container{
+  display: flex;
+  justify-content: center;
+  height: 5vh;
+  width: auto;
+}
+
+#contact-logo{
+  height: 10vh;
+  width: auto;
+  border-radius: 70%;
+}
+
+
+
+/* ==========FOOTER STYLIING============= */
+
+
+
+
+/* ==========RESPONSIVE DESIGN============= */
+
+/* ===== 5K RETINA MAC LABS: Media queries for Curtin Uni mac lab testing only ===== */
+@media only screen and (max-width: 5120px) {
+
+        
+}
+
+/* ===== DESKTOP HD: Media queries for most HD desktops ===== */
+@media only screen and (max-width: 1920px) {
+   
+    
+    
+}
+
+/* ===== SMALL DESKTOP: Media queries for laptop/small desktop ===== */
+@media only screen and (max-width: 1366px) { 
+
+      
+    
+}
+
+/* ===== TABLET: Media queries for verticle and horizontal ===== */
+@media only screen and (max-width: 1024px) { 
+  
+  .right-block {
+    display: none; 
+  }
+  .left-block{
+    display: none;
+  }
+  .content {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .hero-container {
+    flex-direction: column; 
+    height: auto; 
+  }
+
+  .hero-image {
+    width: 100%; 
+    height: auto; 
+  }
+  .overlay-text-h1{
+  bottom: 30%;
+  }
+ 
+    
+}
+
+@media only screen and (max-width: 790px) { 
+  .navbar{
+    display: none;
+  }
+  .logo-container{
+    display: none;
+  }
+  .logo-container img{
+    display: none;
+  }
+  .navbar h1{
+    display: none;
+  }
+  .hamburger-menu-container{
+    display: flex;
+    width: auto; 
+    height: 70px;
+    padding: 0;
+    background-color: #D6C0A3;
+  }
+  .hamburger-menu-container img{
+    height: 100%;
+  }
+  .hamburger-menu-container h2{
+    min-height: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .side-menu{
+    background-color: #7a756a;
+  }
+  #hamburger-menu{
+    display: flex;
+  }
+  .navbar a{
+    display: none;
+  }
+  .overlay-text-h1{
+    display:none;
+  }
+  .timeline {
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline::before {
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+}
+
+.timeline-item {
+    flex: none;
+    width: 80%;
+    margin-bottom: 50px;
+}
+
+.timeline-point {
+    margin: 0;
+}
+
+.timeline-point::after {
+    top: 50%;
+    left: 20px;
+    width: 150px;
+    height: 4px;
+    transform: translateY(-50%);
+}
+
+.timeline-content {
+    margin-top: 20px;
+}
+}
+
+
+    
+        
+}
+
+/* ===== MOBILE: Media queries for small mobile resolution. ===== */
+@media only screen and (max-width: 640px) { 
+
+        
+}
+
+
+@media only screen and (max-width: 360px) { 
+
+            
+        
+}
+
