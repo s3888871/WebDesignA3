@@ -388,7 +388,9 @@ Using the "height: calc(100vw/4) allows for the images to be scaled up and down 
 /* https://cloudinary.com/guides/front-end-development/6-ways-to-stretch-a-background-image-with-css#:~:text=To%20stretch%20the%20background%20image%20across%20the%20container's%20width%20and,container%20differs%20from%20the%20image.&text=To%20cover%20the%20entire%20viewport%2C%20use,%2Dsize%3A%20100vw%20100vh%3B%20. */
 /* https://www.geeksforgeeks.org/how-to-create-a-dynamic-calendar-in-html-css-javascript/ */
 
-/* This section uses the table attributes to form a calendar that fits in with the aestethic of the webpage   */
+/* This section uses the table attributes in HTML to form a calendar that fits in with the aesthetic of the webpage. Using the hover
+  and selected states in CSS, along with JavaScript included in the script.js file, the start and end dates can be dynamically chosen.
+  If the webpage was required to actually book the dates, then any previous days before the current date would be greyed out.  */
 .booking {
   background-image: url('../images/booking-contour.PNG');  
 
@@ -452,8 +454,6 @@ Using the "height: calc(100vw/4) allows for the images to be scaled up and down 
   background-color: #e6e6e6; 
 }
 
-
-
 .calendar td.selected {
   background-color: #d3a87c;
   color: #fff;
@@ -480,7 +480,8 @@ Using the "height: calc(100vw/4) allows for the images to be scaled up and down 
 
 
 
-
+/* Used the flex display and, flex direction as a column, and justify content to create the contact us section.
+A standard text input and label were used for the form submission and the same button style was reused from the calendar. */
 /* ==========SECTION 4 STYLING============= */
 .contact-us{
   margin: 10px;
@@ -528,6 +529,19 @@ Using the "height: calc(100vw/4) allows for the images to be scaled up and down 
   flex-direction: column;
   align-items: center;
 }
+
+.booking-btn{
+  background-color: #d8c6aa; 
+  color: #3d3c32; 
+  font-family: 'PlayfairDisplayMed', sans-serif; 
+  font-size: 2rem;
+  padding: 20px 20px;
+  margin-top: 50px;
+  border: 2px solid #3d3c32; 
+  border-radius: 5px; 
+  text-transform: uppercase;
+}
+
 
 
 /* ==========FOOTER STYLIING============= */

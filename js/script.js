@@ -1,6 +1,5 @@
 
 
-// https://stackoverflow.com/questions/11517150/how-to-change-background-color-of-cell-in-table-using-java-script
 
 // I assign all the calendar cells to the constant variable calendar and have the start and end dates set to null
 const calendarCells = document.querySelectorAll('.calendar td');
@@ -39,11 +38,11 @@ calendarCells.forEach(cell => {
   });
 });
 // https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
-// Creating an intersection observer so that when certain sections enter the viewport, a certain annimation will occur, like a reveal etc
+// Creating an intersection observer so that when certain sections enter the viewport, a certain annimation will occur, like the reveal.
+// It does this by applying the .reveal to the .about-us class when the viewport reaches a certain threshold, in this case 50% of the screen. 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const hiddenSections = document.querySelectorAll(".hidden, .slide-in-left, .fade-in");
-
+  const hiddenSections = document.querySelectorAll(".about-us");
   const observer = new IntersectionObserver(
     (entries, observer) => {
       entries.forEach(entry => {
@@ -54,10 +53,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     },
     {
-      threshold: 0.5, // Trigger when 20% of the section is in the viewport
+      threshold: 0.5,
     }
   );
-
   hiddenSections.forEach(section => observer.observe(section));
 });
 
@@ -66,12 +64,12 @@ const hamburgerMenu = document.getElementById('hamburger-btn');
 const sideMenu = document.getElementById('side-menu');
 const closeMenu = document.getElementById('close-menu');
 
-// Event listener to show the sidebar
+// Event listener to show the sidebar by assigning the "active" CSS state to the sidebar.
 hamburgerMenu.addEventListener('click', () => {
     sideMenu.classList.add('active'); 
 });
 
-// Event listener to hide the sidebar
+// Event listener to hide the sidebar, it removes the "active" CSS state 
 closeMenu.addEventListener('click', () => {
     sideMenu.classList.remove('active');
 });
