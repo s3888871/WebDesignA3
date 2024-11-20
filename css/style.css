@@ -481,7 +481,8 @@ Using the "height: calc(100vw/4) allows for the images to be scaled up and down 
 
 
 /* Used the flex display and, flex direction as a column, and justify content to create the contact us section.
-A standard text input and label were used for the form submission and the same button style was reused from the calendar. */
+A standard text input and label were used for the form submission and the same button CSS was reused from the calendar, although I applied
+inline CSS to the HTML file to reduce the size of the button. */
 /* ==========SECTION 4 STYLING============= */
 .contact-us{
   margin: 10px;
@@ -544,7 +545,6 @@ A standard text input and label were used for the form submission and the same b
 
 
 
-/* ==========FOOTER STYLIING============= */
 
 
 
@@ -571,6 +571,8 @@ A standard text input and label were used for the form submission and the same b
     
 }
 
+/* When the screen narrows at or below 1024px wide, the columns disappear and the overlaying "Escape to Lilac Valley"
+  jumps into the center of the two hero images. The hero images also stack as a column using the flex-direction: column attribute.*/
 /* ===== TABLET: Media queries for verticle and horizontal ===== */
 @media only screen and (max-width: 1024px) { 
   
@@ -600,7 +602,9 @@ A standard text input and label were used for the form submission and the same b
  
     
 }
-
+/* At 760px or smaller the large overlayed text disappears, as does all the navigation links. The hamburger menu button
+appears, and the side bar can become visible when that button is pressed, thanks to the use the display:none; attributes and JavaScript.
+*/
 @media only screen and (max-width: 760px) { 
   .navbar{
     display: none;
@@ -656,7 +660,8 @@ A standard text input and label were used for the form submission and the same b
 }
         
 
-
+/* The About Us section changes and the timeline disappears to allow users to only view the photos that were in the timeline and remove any
+very small unreadable text.  */
 /* ===== MOBILE: Media queries for small mobile resolution. ===== */
 @media only screen and (max-width: 640px) { 
   .timeline-container{
