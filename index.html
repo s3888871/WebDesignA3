@@ -1,157 +1,156 @@
 <!doctype html>
 <html lang="en" style="scroll-behavior: smooth;">
-    <head> 
-        <meta charset="utf-8">     
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <title>Lilac Valley Farms</title> 
-
-        <meta name="author" content="Joshua Telfer">
-        <meta name="description" content="Lilac Valley is a luxourious farm stay, aimed at those that want to exprience sophistication in life ">
-        <meta name="keywords" content="">
-
-        <link rel="stylesheet" href="css/style.css">         
-        <link rel="icon" href="images/lilac-valley-logo.png"> 
-                
-    </head>
-    <body>
-        <div class="hamburger-menu-container">
+   <!-- Added smooth scrolling behaviour to the webpage to enhance how it moves when clicking on 
+      links to different sections. In the head, standard HTML data is included and the relevant CSS is linked -->
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Lilac Valley Farms</title>
+      <meta name="author" content="Joshua Telfer">
+      <meta name="description" content="Lilac Valley is a luxourious farm stay, aimed at those that want to exprience sophistication in life ">
+      <link rel="stylesheet" href="css/style.css">
+   </head>
+   <body>
+      <!--HEADER-->
+      <header>
+         <!--NAVIGATION--> 
+         <!-- This section contains the side menu, hamburger menu btn and title for when the screen width
+            is shrunk down. It is hidden by default on larger widths and replaces the nav bar when enabled. -->
+         <div class="hamburger-menu-container">
             <button id="hamburger-btn">
-                <img src="images/hamburger-menu.png" alt="Hamburger Menu" >
+            <img src="images/hamburger-menu.png" alt="Hamburger Menu" >
             </button>
             <h2>Lilac Valley Farms</h2>
             <div id="side-menu">
-                <span id="close-menu" class="close-btn">✖ Close</span>
-                <ul>
-                    <li><a href="#aboutus">About Us</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#contact-us">Contact Us</a></li>
-                    <li><a href="#booking" class="book-btn">Book Now</a></li>
-                </ul>
+               <span id="close-menu" class="close-btn">✖ Close</span>
+               <ul>
+                  <li><a href="#aboutus">About Us</a></li>
+                  <li><a href="#gallery">Gallery</a></li>
+                  <li><a href="#contact-us">Contact Us</a></li>
+                  <li><a href="#booking" class="book-btn">Book Now</a></li>
+               </ul>
             </div>
-        </div>
-        <div class="left-block"></div>       
-        <div class="content">
-        <!--HEADER-->
-        <!--LOGO-->
-        <!--NAVIGATION-->
-        <nav class="navbar">
+         </div>
+      </header>
+      <!-- Left column block on larger screens to fill in either side of the web page -->
+      <div class="left-block"></div>
+      <div class="content">
+         <!--LOGO-->
+         <link rel="icon" href="images/lilac-valley-logo.png">
+         <!--NAVIGATION-->
+         <!-- Nav bar that contains the main logo, heading and navigation links that scroll to that section -->
+         <nav class="navbar">
             <div class="navbar-left">
-                <div class="logo-container">
-                    <img src="images/lilac-valley-logo.png" alt="Lilac Valley Farms Logo" class="logo">     
-                          
-                </div>
-                
-                <h1>Lilac Valley Farms</h1>
+               <div class="logo-container">
+                  <img src="images/lilac-valley-logo.png" alt="Lilac Valley Farms Logo" class="logo">     
+               </div>
+               <h1>Lilac Valley Farms</h1>
             </div>
-            
             <div class="nav-links">
-                <a href="#aboutus">About Us</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#contact-us">Contact Us</a>
-                <a href="#booking" class="book-btn">Book Now</a>
+               <a href="#aboutus">About Us</a>
+               <a href="#gallery">Gallery</a>
+               <a href="#contact-us">Contact Us</a>
+               <a href="#booking" class="book-btn">Book Now</a>
             </div>
-        </nav>
-        
-        <!-- Reference add for overlaying text -->
-        <!--MAIN CONTENT-->
-        
-            <section id="heroimg" class="heroimg">               
-                <div class="hero-container">
-                     
-                    <div class="hero-image left">
-                        <img src="images/Left-Img.jpg" alt="Left Image">
-                        <div class="overlay-text">About Us</div>
-                      
-                    </div>
-                    
-                    <div class="hero-image right">
-                        <img src="images/Right-Img.jpg" alt="Right Image">
-                        <div class="overlay-text">Gallery</div>
-                    </div>        
-                    <div class="overlay-text-h1">
-                        <h1>Escape to Lilac Valley</h1>
-                    </div>         
-                </div>                
-            </section>
-        
-            
-            <!--SECTION 1-->
-            <section id="aboutus" class="about-us hidden">
-                <h2>About Us</h2>
-                <div class="timeline-container">
-                    <div class="timeline">
-                        <div class="timeline-bar">
-                            <div class="horizontal-bar"></div>
-                            <div class="timeline-item">
-                                <div class="timeline-vertical-line"></div>
-                                <p>1800s</p>
-                                <div class="blurb">This is a brief description of the 1800s era.</div>
-
-                                <img src="images/old-barn.jpg" alt="1800s">
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-vertical-line"></div>
-                                <p>1900s</p>
-                                <div class="blurb">This is a brief description of the 1800s era.</div>
-
-                                <img src="images/Timeline2.jpg" alt="1900s">
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-vertical-line"></div>
-                                <p>2000s</p>
-                                <div class="blurb">This is a brief description of the 1800s era.</div>
-
-                                <img src="images/Timeline3.jpg" alt="2000s">
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-vertical-line"></div>
-                                <p>Now</p>
-                                <div class="blurb">This is a brief description of the 1800s era.</div>
-
-                                <img src="images/Timeline4.jpg" alt="Now">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="small-screen-timeline">
-                    <div class="image-grid">
+         </nav>
+         <!--MAIN CONTENT-->
+         <!-- Reference add for overlaying text -->
+         <!-- Two hero images side by side are present for the desktop view. 
+          As the desktop views are wider, having the images in a row is better for visibility. 
+          When the screen size is reduced, they become stacked, one on top of the other.
+          The overlaying of text is implemented to draw the users attention and browse the website as 
+          soon as they load the page. -->
+         <section id="heroimg" class="heroimg">
+            <div class="hero-container">
+               <div class="hero-image left">
+                  <img src="images/Left-Img.jpg" alt="Left Image">
+                  <div class="overlay-text"><a href="#aboutus" class="overlay-text">About Us</a></div>
+               </div>
+               <div class="hero-image right">
+                  <img src="images/Right-Img.jpg" alt="Right Image">
+                  <div class="overlay-text"><a href="#gallery" class="overlay-text">Gallery</a></div>
+               </div>
+               <div class="overlay-text-h1">
+                  <h1>Escape to Lilac Valley</h1>
+               </div>
+            </div>
+         </section>
+         
+         <!--SECTION 1-->
+         <!-- Applied a reveal effect using a combination of CSS and JavaScript. The effect triggers when 60% of the section comes into the 
+          user viewport. Timeline is added with CSS used to get the positioning right. A small screen timeline is hidden by default
+          and appears when the screen width narrows.  Further detail in CSS and the JavaScript. -->
+         <section id="aboutus" class="about-us hidden">
+            <h2>About Us</h2>
+            <div class="timeline-container">
+               <div class="timeline">
+                  <div class="timeline-bar">
+                     <div class="horizontal-bar"></div>
+                     <div class="timeline-item">
+                        <div class="timeline-vertical-line"></div>
+                        <p>1800s</p>
+                        <div class="blurb">This is a brief description of the 1800s era.</div>
                         <img src="images/old-barn.jpg" alt="1800s">
+                     </div>
+                     <div class="timeline-item">
+                        <div class="timeline-vertical-line"></div>
+                        <p>1900s</p>
+                        <div class="blurb">This is a brief description of the 1800s era.</div>
                         <img src="images/Timeline2.jpg" alt="1900s">
+                     </div>
+                     <div class="timeline-item">
+                        <div class="timeline-vertical-line"></div>
+                        <p>2000s</p>
+                        <div class="blurb">This is a brief description of the 1800s era.</div>
                         <img src="images/Timeline3.jpg" alt="2000s">
+                     </div>
+                     <div class="timeline-item">
+                        <div class="timeline-vertical-line"></div>
+                        <p>Now</p>
+                        <div class="blurb">This is a brief description of the 1800s era.</div>
                         <img src="images/Timeline4.jpg" alt="Now">
-                    </div>
-                </div>
-            </section>
-
-            <!--SECTION 2-->
-
-            <section id="gallery" class="gallery">
-                <h2>Gallery</h2>
-                    <div class="gallery-grid">
-                        <img src="images/Gallery-1.jpg" alt="Placeholder image">
-                        <img src="images/Gallery-2.png" alt="Placeholder image">
-                        <img src="images/Gallery-3.jpg" alt="Placeholder image">
-                        <img src="images/Gallery-4.jpg" alt="Placeholder image">
-                        <img src="images/Gallery-5.jpg" alt="Placeholder image">
-                        <img src="images/Gallery-6.jpg" alt="Placeholder image">
-                        <img src="images/Gallery-7.jpg" alt="Placeholder image">
-                        <img src="images/Gallery-8.jpg" alt="Placeholder image">
-                        <img src="images/Gallery-9.jpg" alt="Placeholder image">
-                        <img src="images/Gallery-10.jpg" alt="Placeholder image">
-                        <img src="images/Gallery-11.jpg" alt="Placeholder image">
-                        <img src="images/Gallery-1.jpg" alt="Placeholder image">                       
-                    </div>
-            </section>
-
-            <!--SECTION 3-->
-            <!-- Reference add for the calendar. -->
-            <section id="booking" class="booking">
-                <div class="calendar-container">
-                    <h2>November 2024</h2>
-                    <table class="calendar">
-                    <thead>
-                        <tr>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="small-screen-timeline">
+               <div class="image-grid">
+                  <img src="images/old-barn.jpg" alt="1800s">
+                  <img src="images/Timeline2.jpg" alt="1900s">
+                  <img src="images/Timeline3.jpg" alt="2000s">
+                  <img src="images/Timeline4.jpg" alt="Now">
+               </div>
+            </div>
+         </section>
+         <!--SECTION 2-->
+         <!-- Gallery that uses a grid to display all images of the accomodation. More detail in CSS. -->
+         <section id="gallery" class="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+               <img src="images/Gallery-1.jpg" alt="Placeholder image">
+               <img src="images/Gallery-2.png" alt="Placeholder image">
+               <img src="images/Gallery-3.jpg" alt="Placeholder image">
+               <img src="images/Gallery-4.jpg" alt="Placeholder image">
+               <img src="images/Gallery-5.jpg" alt="Placeholder image">
+               <img src="images/Gallery-6.jpg" alt="Placeholder image">
+               <img src="images/Gallery-7.jpg" alt="Placeholder image">
+               <img src="images/Gallery-8.jpg" alt="Placeholder image">
+               <img src="images/Gallery-9.jpg" alt="Placeholder image">
+               <img src="images/Gallery-10.jpg" alt="Placeholder image">
+               <img src="images/Gallery-11.jpg" alt="Placeholder image">
+               <img src="images/Gallery-1.jpg" alt="Placeholder image">                       
+            </div>
+         </section>
+         <!--SECTION 3-->
+         <!-- Reference add for the calendar. -->
+          <!-- Created a calendar referencing W3Schools calendar guide, using a combination of HTML, CSS and JavaScript.
+           Month is locked to November as this is when the site was created.  -->
+         <section id="booking" class="booking">
+            <div class="calendar-container">
+               <h2>November 2024</h2>
+               <table class="calendar">
+                  <thead>
+                     <tr>
                         <th>Sun</th>
                         <th>Mon</th>
                         <th>Tue</th>
@@ -159,10 +158,10 @@
                         <th>Thu</th>
                         <th>Fri</th>
                         <th>Sat</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -170,8 +169,8 @@
                         <td data-date="2024-11-01">1</td>
                         <td data-date="2024-11-02">2</td>
                         <td data-date="2024-11-03">3</td>
-                        </tr>
-                        <tr>
+                     </tr>
+                     <tr>
                         <td data-date="2024-11-04">4</td>
                         <td data-date="2024-11-05">5</td>
                         <td data-date="2024-11-06">6</td>
@@ -179,8 +178,8 @@
                         <td data-date="2024-11-08">8</td>
                         <td data-date="2024-11-09">9</td>
                         <td data-date="2024-11-10">10</td>
-                        </tr>
-                        <tr>
+                     </tr>
+                     <tr>
                         <td data-date="2024-11-11">11</td>
                         <td data-date="2024-11-12">12</td>
                         <td data-date="2024-11-13">13</td>
@@ -188,8 +187,8 @@
                         <td data-date="2024-11-15">15</td>
                         <td data-date="2024-11-16">16</td>
                         <td data-date="2024-11-17">17</td>
-                        </tr>
-                        <tr>
+                     </tr>
+                     <tr>
                         <td data-date="2024-11-18">18</td>
                         <td data-date="2024-11-19">19</td>
                         <td data-date="2024-11-20">20</td>
@@ -197,8 +196,8 @@
                         <td data-date="2024-11-22">22</td>
                         <td data-date="2024-11-23">23</td>
                         <td data-date="2024-11-24">24</td>
-                        </tr>
-                        <tr>
+                     </tr>
+                     <tr>
                         <td data-date="2024-11-25">25</td>
                         <td data-date="2024-11-26">26</td>
                         <td data-date="2024-11-27">27</td>
@@ -206,45 +205,53 @@
                         <td data-date="2024-11-29">29</td>
                         <td data-date="2024-11-30">30</td>
                         <td></td>
-                        </tr>
-                    </tbody>
-                    </table>
-                    <div id="selected-dates">
-                        <p><strong>Start Date:</strong> <span id="start-date">None</span></p>
-                        <p><strong>End Date:</strong> <span id="end-date">None</span></p>
-                        <button id="booking-btn">Book Now</button>
-                      </div>
-                </div>
-                
-            </section>
-            
-
-            <!--SECTION 4-->
-            
-
-        <!--MAIN CONTENT ENDS-->
-
-        <!--FOOTER-->
-        <!--CONTACT FORM OR TEXT-->
-        <footer>
+                     </tr>
+                  </tbody>
+               </table>
+               <div id="selected-dates">
+                  <p><strong>Start Date:</strong> <span id="start-date">None</span></p>
+                  <p><strong>End Date:</strong> <span id="end-date">None</span></p>
+                  <button id="booking-btn">Book Now</button>
+               </div>
+            </div>
+         </section>         
+         <!--MAIN CONTENT ENDS-->        
+         <!--CONTACT FORM OR TEXT-->
+         <!--FOOTER-->
+         <!-- Contact form only requires the users name, email and message for simplicity.
+          Implemented using a standard input text box. -->
+         <footer>
             <section id="contact-us" >
-                <div class="contact-us">
-                    <h2>Contact Us</h2>
-                    <div class="contact-us-container">
-                        <img src="images/lilac-valley-logo.png" id="contact-logo" alt="Lilac Valley Logo">
+               <div class="contact-us">
+                  <h2>Contact Us</h2>
+                  <div class="input-text-container">
+                    <div class="input-group">
+                        <label >Name:</label>
+                        <input type="text" class="input-text">
                     </div>
-                    <div class="contact-logo-container">
-                        <img src="images/facebook-icon.png" alt="Facebook Icon" style="padding-right: 30px;">
-                        <img src="images/instagram-icon.png" alt="Instagram Icon" style="padding-right: 30px;">
-                        <img src="images/email-icon.png" alt="Email Icon" style="padding-right: 30px;">
+                   
+                    <div class="input-group">
+                        <label >Email:</label>
+                        <input type="text" class="input-text">
                     </div>
-                </div>
+                    <div class="input-group">
+                        <label >Message:</label>
+                        <input type="text" class="input-text">
+                    </div>
+                  </div>
+                  <div class="contact-us-container">
+                     <img src="images/lilac-valley-logo.png" id="contact-logo" alt="Lilac Valley Logo">
+                  </div>
+                  <div class="contact-logo-container">
+                     <img src="images/facebook-icon.png" alt="Facebook Icon" >
+                     <img src="images/instagram-icon.png" alt="Instagram Icon" >
+                     <img src="images/email-icon.png" alt="Email Icon">
+                  </div>
+               </div>
             </section>
-        </footer>
-        
-        <!--SOCIAL MEDIA ?-->
-        <div class="right-block"></div>
-    </div>
-    <script src = "./js/script.js"></script>
-    </body> 
+         </footer>
+         <div class="right-block"></div>
+      </div>
+      <script src = "./js/script.js"></script>
+   </body>
 </html>

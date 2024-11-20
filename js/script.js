@@ -48,8 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
     (entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("reveal"); // Add the 'reveal' class to trigger the animation
-          observer.unobserve(entry.target); // Stop observing once revealed
+          entry.target.classList.add("reveal"); 
+          observer.unobserve(entry.target); 
         }
       });
     },
@@ -68,10 +68,10 @@ const closeMenu = document.getElementById('close-menu');
 
 // Event listener to show the sidebar
 hamburgerMenu.addEventListener('click', () => {
-    sideMenu.classList.add('active'); // Show side menu
+    sideMenu.classList.add('active'); 
 });
 
 // Event listener to hide the sidebar
 closeMenu.addEventListener('click', () => {
-    sideMenu.classList.remove('active'); // Hide side menu
+    sideMenu.classList.remove('active');
 });

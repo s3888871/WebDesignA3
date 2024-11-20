@@ -1,5 +1,8 @@
 /* ==========BASIC UNIVERSAL STYLING & CLEAN UP============= */
     /* some basic css resetting */
+
+    /* Added three custom fonts of the family "Playfair Display" to match the luxurious, farm aesthetic I was looking for.
+    Gave each the body, titles, regular text and links different types of the Playfair Display font. */
 @font-face {
   font-family: 'PlayfairDisplayBlack';
   src: url('../fonts/PlayfairDisplay-Black.ttf') format('truetype');
@@ -24,6 +27,9 @@ h1 {font-family: 'PlayfairDisplayBold', sans-serif;}
 h2 {font-family: 'PlayfairDisplayBold', sans-serif;} 
 p {font-family: 'PlayfairDisplayMed';}
 
+
+/* Added a left and right block or column to the webpage that is enabled by default on large screens.
+It covers 30% of the view combines and takes up the whole viewport. */
 .left-block {
   width: 15%; 
   background-color: #d3d3d3; 
@@ -51,13 +57,20 @@ p {font-family: 'PlayfairDisplayMed';}
 /* ==========HEADER============= */
 /* ==========LOGO============= */
 /* ==========NAVIGATION============= */
-.heroimg{
-  position: relative;
-}
+/* Used  flex displays for layout alignment and z-index to get rid of certain layering troubles I was having when 
+the sidebar would appear. I used the "display: none;" to hide elements, like the side bar and hamburger menu, when the 
+screensizes are of larger widths and then further CSS makes them visible in the @media. A transition is used to give a smooth
+animation for interactive elements like the hamburger button. 
+When the hamburger button is clicked, then the JavaScript is run and assigns the "active" state to the side menu. This increases
+its width from nothing to 400px and displays its contents. A transition is also applied to make it seem like the sidebar is pushing 
+across the screen, and just enhances how the website looks and feels to the user. A similar transition is applied when closing the sidebar.
+I used a W3 Schools tutorial to show how to implement a dynamic sidebar.
+Reference:  https://www.w3schools.com/howto/howto_js_sidenav.asp */
+
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Align items vertically */
+  align-items: center; 
   padding: 15px 30px;
   background-color: #7a756a; 
   color: #fff;
@@ -94,10 +107,9 @@ button {
 }
 #side-menu.active {
   width: 250px; 
-  
 }
 
-#side-menu .close-btn {
+.close-btn {
   display: block;
   text-align: left;
   padding: 10px 20px;
@@ -146,7 +158,11 @@ button {
   color: inherit; 
   white-space: nowrap;
 }
-/* https://www.w3schools.com/howto/howto_js_sidenav.asp */
+
+.heroimg{
+  position: relative;
+}
+
 
 
 
@@ -180,7 +196,14 @@ button {
 
 /* ==========MAIN BODY CONTENT============= */
 
+/* Two hero images side by side are placed next to each other, inside a hero container. The container applies how high and how wide they should
+go, taking up 100% of the available width given by its parent container (the .content class). The hero-image uses the object-fit: cover to maintain
+the aspect ratio that I wanted for this section.
 
+Using the "transform: translate" function and position: absolute allowed to center text in the center of both each images (with the
+"about us" and "gallery" buttons, and bottom center the call to action "Escape to Lilac Valley". I used adapatable sizing methods like
+"em" and "vh" to make this section flexible to changing screen sizes. 
+*/
 
 .hero-container {
     display: flex;
@@ -197,7 +220,6 @@ button {
     overflow: hidden;    
     z-index: 1;
 }
-
 
 .hero-image img {
     width: 100%;
@@ -227,7 +249,7 @@ button {
   font-size: 3em;
   left: 50%; 
   bottom: 0;
-  color: #7a756a; 
+  color: #fffffe; 
   text-align: center;
   transform: translate(-50%, -50%); 
   white-space: nowrap;
@@ -238,6 +260,10 @@ button {
 
 
 /* ==========SECTION 1 STYLING============= */
+/* This section is initially hidden and triggers the reveal effect once 50% of the section is in the user viewport, allowing for 
+a dynamic effect. The timeline bar and horizontal bar were tricky to figure out and position just right, but through trial
+and error I managed to get all the timeline bars and lines matched up using absolute positioning and flexboxs to align items.  
+  */
 .hidden {
   opacity: 0;
   transform: translateY(50px); 
@@ -316,7 +342,7 @@ button {
   margin-top: 10px;
 }
 
-.timeline-item .blurb {
+.blurb {
   margin-top: 5px;
   font-size: 0.9rem;
   color: #555;
@@ -328,6 +354,10 @@ button {
 }
 
 /* ==========SECTION 2 STYLING============= */
+/* This section is  a grid of images that allows for dynamic changing of the grid depending on the size of the screen.
+It uses a grid layout and the "grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))" to adjust the columsn on the screen.
+Using the "height: calc(100vw/4) allows for the images to be scaled up and down while maintaining aspect ratios. 
+*/
 .gallery{
   font-family: 'Arial', sans-serif;
   background-color: #D6C0A3; 
@@ -349,14 +379,16 @@ button {
 
 .gallery-grid img {
   width: 100%;
-  height: calc(100vw / 4); /* Adjusts height based on viewport width */
-  max-height: 200px; /* Optional max height */
+  height: calc(100vw / 4); 
+  max-height: 200px; 
   object-fit: cover;
 }
 
 /* ==========SECTION 3 STYLING============= */
+/* https://cloudinary.com/guides/front-end-development/6-ways-to-stretch-a-background-image-with-css#:~:text=To%20stretch%20the%20background%20image%20across%20the%20container's%20width%20and,container%20differs%20from%20the%20image.&text=To%20cover%20the%20entire%20viewport%2C%20use,%2Dsize%3A%20100vw%20100vh%3B%20. */
+/* https://www.geeksforgeeks.org/how-to-create-a-dynamic-calendar-in-html-css-javascript/ */
 
-/* Give the calendar 2/3 of the parent container */
+/* This section uses the table attributes to form a calendar that fits in with the aestethic of the webpage   */
 .booking {
   background-image: url('../images/booking-contour.PNG');  
 
@@ -366,7 +398,6 @@ button {
 }
 
 
-/* https://cloudinary.com/guides/front-end-development/6-ways-to-stretch-a-background-image-with-css#:~:text=To%20stretch%20the%20background%20image%20across%20the%20container's%20width%20and,container%20differs%20from%20the%20image.&text=To%20cover%20the%20entire%20viewport%2C%20use,%2Dsize%3A%20100vw%20100vh%3B%20. */
 .calendar-container {
   width: 100%;
   height: 70vh; 
@@ -427,7 +458,6 @@ button {
   background-color: #d3a87c;
   color: #fff;
 }
-/* https://www.geeksforgeeks.org/how-to-create-a-dynamic-calendar-in-html-css-javascript/ */
 
 #selected-dates{
   text-align: center;
@@ -454,9 +484,12 @@ button {
 /* ==========SECTION 4 STYLING============= */
 .contact-us{
   margin: 10px;
-  height: 30vh;
   width: auto;
   background-color: #7a756a;
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between; 
+  align-items: center; 
 
 }
 .contact-us h2{
@@ -466,24 +499,23 @@ button {
   justify-content: center;
 }
 
-.contact-us-container{
+.contact-us-container {
   display: flex;
   justify-content: center;
-  padding: 15px;
+  align-items: center;
+  margin-top: 20px;
 }
 
-.contact-us-container img{
-  display: flex;
-  justify-content: space-between;
-  height: 5vh;
-  width: auto;
+.contact-logo-container img {
+  height: 40px; 
+  width: 40px; 
 }
 
-.contact-logo-container{
+.contact-logo-container {
   display: flex;
   justify-content: center;
-  height: 5vh;
-  width: auto;
+  gap: 20px; 
+  margin-bottom: 10px; 
 }
 
 #contact-logo{
@@ -491,7 +523,11 @@ button {
   width: auto;
   border-radius: 70%;
 }
-
+.input-text-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 
 /* ==========FOOTER STYLIING============= */
@@ -545,6 +581,7 @@ button {
   }
   .overlay-text-h1{
   bottom: 30%;
+  
   }
  
     
