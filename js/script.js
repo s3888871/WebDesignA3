@@ -12,6 +12,10 @@ let endDate = null;
 // These dates are then converted from the javascripts standard date format of "yyyy-mm-dd" to dd/mm/yyyy to make it easier to read
 // If both the endDate and the startDate are not null (they are selected), then on the next click they are set to null.
 // This allows the user to start again and select a new start and end date. 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
+// https://stackoverflow.com/questions/46341171/how-to-addeventlistener-to-table-cells
+// https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+
 calendarCells.forEach(cell => {
   cell.addEventListener('click', () => {
     const selectedDate = cell.getAttribute('data-date');
