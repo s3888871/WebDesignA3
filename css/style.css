@@ -215,6 +215,7 @@ button {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  z-index: 999;
 }
 
 
@@ -229,122 +230,84 @@ button {
   opacity: 1;
   transform: translateY(0); 
 }
+
 .about-us {
-  height: 60vh;
   font-family: 'Arial', sans-serif;
   background-color: #e6d8c6; 
-  padding: 10px;
+  padding: 20px 10px 10px 10px;
   text-align: center;
-  justify-content: center;
 } 
+
 .about-us h2 {
   font-size: 2rem;
   color: #333; 
 }
 
-.timeline-container{
-  align-items: center;
-  height: 100%;
+.timeline-container {
   width: 100%;
   overflow-x: auto;
 }
 
 .timeline {
-  display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    position: relative;
-    margin: 0 auto;
-    max-width: 1200px;
-  
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .timeline-bar {
+  position: relative;
   display: flex;
-  width: 90%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.horizontal-bar {
+  position: absolute;
+  top: 35px; 
+  left: 0;
+  right: 0;
   height: 20px;
   background-color: #7b7460;
   border-radius: 50px;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
-
-.timeline p{
-  position: absolute;
-  font-weight: bold;
-  top: -7%;
-  left: 1%;
-}
-
-.timeline-vertical-line-1 {
-  border-left: 3px solid #7b7460;
-  height: 200px;
-  position: absolute;
-  left: 30%;
-}
-.timeline-vertical-line-1 img{
-  position: relative;
-  width: auto;
-  height: 80%;
-  top: 90%;
-  right: 50%;
-}
-
-.timeline-vertical-line-2 {
-  border-left: 3px solid #7b7460;
-  height: 200px;
-  position: absolute;
-  left: 10%;
-}
-.timeline-vertical-line-2 img{
-  position: relative;
-  width: auto;
-  height: 80%;
-  top: 90%;
-  right: 40%
-}
-
-
-.timeline-vertical-line-3 {
-  border-left: 3px solid #7b7460;
-  height: 200px;
-  position: absolute;
-  right: 10%;
-}
-.timeline-vertical-line-3 img{
-  position: relative;
-  width: auto;
-  height: 80%;
-  top: 90%;
-  right: 50%;
-}
-
-.timeline-vertical-line-4 {
-  border-left: 3px solid #7b7460;
-  height: 200px;
-  position: absolute;
-  right: 30%;
-}
-.timeline-vertical-line-4 img{
-  position: relative;
-  width: auto;
-  height: 80%;
-  top: 90%;
-  right: 50%;
-
+  z-index: -1;
 }
 
 .timeline-item {
   flex: 1;
-  text-align: center;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0 10px;
-  min-width: 150px; 
+  box-sizing: border-box;
 }
 
+.timeline-vertical-line {
+  width: 3px;
+  height: 100px;
+  background-color: #7b7460;
+  margin-top: 50px; 
+}
 
+.timeline-item p {
+  font-weight: bold;
+  margin-top: 10px;
+}
 
+.timeline-item img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.timeline-item .blurb {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #555;
+  padding: 0 10px;
+}
+
+.small-screen-timeline {
+  display: none;
+}
 
 /* ==========SECTION 2 STYLING============= */
 .gallery{
@@ -557,7 +520,7 @@ button {
     
 }
 
-@media only screen and (max-width: 790px) { 
+@media only screen and (max-width: 760px) { 
   .navbar{
     display: none;
   }
@@ -602,51 +565,43 @@ button {
     align-items: center;
 }
 
-.timeline::before {
-    top: 0;
-    left: 50%;
-    width: 4px;
-    height: 100%;
-}
-
-.timeline-item {
-    flex: none;
-    width: 80%;
-    margin-bottom: 50px;
-}
-
-.timeline-point {
-    margin: 0;
-}
-
-.timeline-point::after {
-    top: 50%;
-    left: 20px;
-    width: 150px;
-    height: 4px;
-    transform: translateY(-50%);
-}
-
-.timeline-content {
-    margin-top: 20px;
-}
-}
 
 
-    
+  .small-screen-timeline{
+    display: none;
+  }
+
+}
         
-}
+
 
 /* ===== MOBILE: Media queries for small mobile resolution. ===== */
 @media only screen and (max-width: 640px) { 
+  .timeline-container{
+    display: none;
+  }
+  .small-screen-timeline{
+    display: block;
+    height: auto;
+    margin: 3%;
+  }
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px; 
+    max-width: 600px; 
+    margin: 0 auto; 
+  }
+  
+  .image-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
-        
 }
-
 
 @media only screen and (max-width: 360px) { 
 
-            
-        
 }
-
+        
