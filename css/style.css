@@ -1,10 +1,28 @@
 /* ==========BASIC UNIVERSAL STYLING & CLEAN UP============= */
     /* some basic css resetting */
-body { margin: 0; box-sizing: border-box; font-family: 'Times New Roman', Times, serif;}
-a { text-decoration: none; color:black; font-family: 'Times New Roman', Times, serif;}
-h1 {font-family: 'Times New Roman', Times, serif;}
-h2 {font-family: 'Times New Roman', Times, serif;}
-
+@font-face {
+  font-family: 'PlayfairDisplayBlack';
+  src: url('../fonts/PlayfairDisplay-Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PlayfairDisplayMed';
+  src: url('../fonts/PlayfairDisplay-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PlayfairDisplayBold';
+  src: url('../fonts/PlayfairDisplay-SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+body { margin: 0; box-sizing: border-box; font-family: 'PlayfairDisplayBlack', sans-serif;}
+a { text-decoration: none; color:black; font-family: 'PlayfairDisplayMed', sans-serif;}
+h1 {font-family: 'PlayfairDisplayBold', sans-serif;}
+h2 {font-family: 'PlayfairDisplayBold', sans-serif;} 
+p {font-family: 'PlayfairDisplayMed';}
 
 .left-block {
   width: 15%; 
@@ -414,6 +432,18 @@ button {
 #selected-dates{
   text-align: center;
   margin: 10px;;
+}
+
+#booking-btn{
+  background-color: #d8c6aa; 
+  color: #3d3c32; 
+  font-family: 'PlayfairDisplayMed', sans-serif; 
+  font-size: 2rem;
+  padding: 20px 20px;
+  margin-top: 50px;
+  border: 2px solid #3d3c32; 
+  border-radius: 5px; 
+  text-transform: uppercase;
 }
 
   
